@@ -1,0 +1,9 @@
+<?php
+	error_reporting(0);
+	session_start();
+	if(!isset($_SESSION['log'])||!$_SESSION['log'])
+		{
+			session_destroy();
+			header("location:error.php");
+		}
+?>
