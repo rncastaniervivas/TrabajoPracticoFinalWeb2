@@ -38,20 +38,7 @@
 				 $mensaje = sprintf("<br>Usuario Creado Exitosamente!<br><br>");
 				}
 
-		        $buscarPais = "SELECT * FROM pais";
-		        $paisEncontrado = mysqli_query($conexion, $buscarPais);
-		        while($fila = mysqli_fetch_assoc($paisEncontrado)){
-		            echo "<option value='"  . $fila["codPais"] . "'>" . $fila["descPais"] . "</option>";
-		        }
-
-		        $buscarProvincia = "SELECT codProv, descProv FROM provincia WHERE codPais = '$pais' ";
-				$provEncontrado = mysqli_query($conexion, $buscaProvincia);
-		
-				while ($row = mysqli_fetch_assoc(provEncontrado))
-				{
-					echo "<option value='" . $row["codProv"] . "'>" . $row["descProv"] . "</option>";
-				}
-			}
+		    }
 		}
 	}
 	else{
