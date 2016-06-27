@@ -72,6 +72,9 @@
 
 	        <div class="col-lg-3">
 	        	<!-- FORMULARIO DE LOGIN -->
+	        	<h4>USUARIOS REGISTRADOS</h4>
+			    <hr size="100%"></hr>
+			    <label for="inputUsuario" class="control-label">Usuario</label>
 				<form class="form-horizontal" action="index.php" method="POST" id="login">
 		        	<!-- MUESTRA EL MSJ DE ERROR EN EL FORM -->
 		        	<?php if ($mensaje) { ?>
