@@ -72,9 +72,6 @@
 
 	        <div class="col-lg-3">
 	        	<!-- FORMULARIO DE LOGIN -->
-	        	<h4>USUARIOS REGISTRADOS</h4>
-			    <hr size="100%"></hr>
-			    <label for="inputUsuario" class="control-label">Usuario</label>
 				<form class="form-horizontal" action="index.php" method="POST" id="login">
 		        	<!-- MUESTRA EL MSJ DE ERROR EN EL FORM -->
 		        	<?php if ($mensaje) { ?>
@@ -83,12 +80,15 @@
 					    </div>
 					    <?php } ?>	
 			        <div class="form-group">
-			            <label for="inputUsuario" class="control-label">User</label>
+			        	<h4>USUARIOS REGISTRADOS</h4>
+					    <hr size="100%"></hr>
+					    <label for="inputUsuario" class="control-label">Usuario</label>
 			            <input type="text" name="user" class="form-control" id="inputUsuario" placeholder="Usuario" value="<?php if (isset($_COOKIE['user'])) echo $_COOKIE['user']; ?>">
 			        </div>
 			        <div class="form-group">
-			            <label for="inputPassword" class="control-label">Password</label>
-			            <input type="password" name="pass" class="form-control" id="inputPassword" placeholder="Contraseña" >
+			            <label for="inputPassword" class="control-label">Clave</label>
+			            <input type="password" name="pass" class="form-control" id="inputPassword" 
+			            placeholder="Clave" value="<?php if (isset($_COOKIE['pass'])) echo $_COOKIE['pass']; ?>">
 			        </div>
 			        <div class="form-group">
 			            <div class="checkbox">
