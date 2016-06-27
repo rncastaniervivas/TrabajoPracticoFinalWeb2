@@ -84,37 +84,37 @@
 			    		<div class="form-group">
 			      			<label for="inputNombre" class="col-lg-2 control-label">Nombre</label>
 			      			<div class="col-lg-10">
-						        <input type="text" name="nombre" class="form-control" id="inputNombre" placeholder="Nombre" value="<?php echo $nombre ?>">
+						        <input type="text" name="nombre" class="form-control" id="inputNombre" placeholder="Nombre" value="<?php echo $nombre ?>" pattern="^[a-zA-ZÑÁÉÍÓÚáéíóúñ\s]*" required/>
 						    </div>
 			    		</div>
 			    		<div class="form-group">
 			      			<label for="inputApellido" class="col-lg-2 control-label">Apellido</label>
 			      			<div class="col-lg-10">
-						        <input type="text" name="apellido" class="form-control" id="inputApellido" placeholder="Apellido"value="<?php echo $ape ?>">
+						        <input type="text" name="apellido" class="form-control" id="inputApellido" placeholder="Apellido"value="<?php echo $apellido ?>" pattern="^[a-zA-ZÑÁÉÍÓÚáéíóúñ\s]*" required/>
 						    </div>
 			    		</div>
 			    		<div class="form-group">
 			      			<label for="inputCalle" class="col-lg-2 control-label">Calle</label>
 			      			<div class="col-lg-10">
-						        <input type="text" name="calle" class="form-control" id="inputcalle" placeholder="Calle"value="<?php echo $calle ?>" >
+						        <input type="text" name="calle" class="form-control" id="inputcalle" placeholder="Calle"value="<?php echo $calle ?>" pattern="^[a-zA-ZÑÁÉÍÓÚáéíóúñ\s]*" required/>
 						    </div>
 						</div>
 						<div class="form-group">
 			      			<label for="inputNro" class="col-lg-2 control-label">Nro. de calle</label>
 			      			<div class="col-lg-10">
-						        <input type="text" name="nro" class="form-control" id="inputNoro" placeholder="Nro. de calle"value="<?php echo $nro ?>">
+						        <input type="text" name="nro" class="form-control" id="inputNro" placeholder="Nro. de calle"value="<?php echo $nro ?>"pattern="^[0-9]*" required/>
 						    </div>
 						</div>
 						<div class="form-group">
 			      			<label for="inputCp" class="col-lg-2 control-label">Código Postal</label>
 			      			<div class="col-lg-10">
-						        <input type="text" name="cp" class="form-control" id="inputCp" placeholder="Código Postal" value="<?php echo $cp ?>">
+						        <input type="text" name="cp" class="form-control" id="inputCp" placeholder="Código Postal" value="<?php echo $cp ?>" pattern="^[0-9]*" required/>
 						    </div>
 						</div>
 						<div class="form-group">
 			      			<label for="inputLocalidad" class="col-lg-2 control-label">Localidad</label>
 			      			<div class="col-lg-10">
-						        <input type="text" name="localidad" class="form-control" id="inputLocalidad" placeholder="Localidad" value="<?php echo $localidad ?>">
+						        <input type="text" name="localidad" class="form-control" id="inputLocalidad" placeholder="Localidad" value="<?php echo $localidad ?>" pattern="^[a-zA-ZÑÁÉÍÓÚáéíóúñ\s]*" required/>
 						    </div>
 						</div>
 					</div>
@@ -122,7 +122,7 @@
 						<div class="form-group">
 			      			<label for="inputTelefono" class="col-lg-2 control-label">Teléfono</label>
 			      			<div class="col-lg-10">
-						        <input type="text" name="telefono" class="form-control" id="inputTelefono" placeholder="Teléfono" value="<?php echo $tele ?>">
+						        <input type="text" name="telefono" class="form-control" id="inputTelefono" placeholder="Teléfono" value="<?php echo $tele ?>" pattern="^[0-9]*" required/>
 						    </div>
 						</div>
 						<div class="form-group">
@@ -149,25 +149,25 @@
 			    		<div class="form-group">
 			      			<label for="inputEmail" class="col-lg-2 control-label">Email</label>
 			      			<div class="col-lg-10">
-						        <input type="email" name="mail" class="form-control" id="inputEmail" placeholder="Email" value="<?php echo $mail ?>">
+						        <input type="email" name="mail" class="form-control" id="inputEmail" placeholder="Email" value="<?php echo $mail ?>" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" required/>
 						    </div>
 			    		</div>
 			    		<div class="form-group">
 			      			<label for="inputUsuario" class="col-lg-2 control-label">Usuario</label>
 			      			<div class="col-lg-10">
-						        <input type="text" name="user" class="form-control" id="inputUsuario" placeholder="Usuario" value="<?php echo $user ?>">
+						        <input type="text" name="user" class="form-control" id="inputUsuario" placeholder="Usuario" value="<?php echo $user ?>" pattern="^[a-zA-ZÑÁÉÍÓÚáéíóúñ0-9_]*" required/>
 						    </div>
 			    		</div>
 				    	<div class="form-group">
 						    <label for="inputPassword" class="col-lg-2 control-label">Contraseña</label>
 						    <div class="col-lg-10">
-						    	<input type="password" name="pass" class="form-control" id="inputPassword" placeholder="Password">
+						    	<input type="password" name="pass" class="form-control" id="inputPassword" placeholder="Password" pattern="^[a-zA-ZÑÁÉÍÓÚáéíóúñ0-9_*#-.]*" required/>
 						    </div>
 				    	</div>
 						<div class="form-group">
 						  	<div class="col-lg-10 col-lg-offset-2">
-						      	<button type="reset" class="btn btn-default">Cancel</button>
-						      	<button type="submit" name="enviar" class="btn btn-primary">Submit</button>
+						      	<input type="reset" class="btn btn-default" value="Resetear"></input>
+						      	<input type="submit" name="enviar" value= "Enviar" class="btn btn-primary"></input>
 						   	</div>
 						</div>
 						<?php if ($mensaje) { ?>
