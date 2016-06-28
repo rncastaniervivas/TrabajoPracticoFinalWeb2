@@ -38,7 +38,11 @@
 				 $mensaje = sprintf("<br>Usuario Creado Exitosamente!<br><br>");
 				}
 
+<<<<<<< HEAD
 		    }
+=======
+			}
+>>>>>>> origin/master
 		}
 	}
 	else{
